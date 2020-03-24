@@ -49,6 +49,10 @@
         text-decoration: transparent;
       }
 
+      .hide {
+        display: none;
+      }
+
     </style>
 
   </head>
@@ -73,6 +77,19 @@
     <button class="fat"> Ver Ideias </button>
 
     <p id="footer">com 💜 <a href="http://rocketseat.com.br">Rocketseat</a> </p> <!-- emoji(heart-purple) -->
+
+    <script>
+
+      document
+        .querySelector("button.fat")
+        .addEventListener("click", function(){
+          document
+            .querySelector("#footer")
+            .classList
+            .toggle("hide")
+        })
+
+    </script>
 
   </body>
 
