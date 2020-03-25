@@ -175,6 +175,7 @@ footer a {
   display: flex;
   justify-content: center;
 
+  transition: 400ms;
 }
 
 #modal .content {
@@ -242,6 +243,39 @@ form label {
 
 }
 
+form a {
+  width: 150px;
+  height: 40px;
+
+  background-color: #ffffff22;
+  color: white;
+
+  /* configuração do display FLEX */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* fim */
+
+  font-size: 14px;
+  font-weight: bold;
+
+
+  border-radius: 6px;
+
+  /* configuração do display GRID */
+  align-self: end;
+  /* */
+
+  transition: 400ms;
+}
+
+form a:hover {
+  background: #fff;
+  color: #ff5e84;
+
+  text-decoration: none;
+}
+
 form button {
   background: white;
 
@@ -256,6 +290,8 @@ form button {
 
   grid-column: 2; /* lança o button para a segunda coluna */
   justify-self: end;
+
+  transition: 400ms;
 }
 
 form button:hover {
@@ -266,5 +302,6 @@ form button:hover {
 }
 
 #modal.hide {
-  display: none;
+  opacity: 0;
+  visibility: hidden;
 }
