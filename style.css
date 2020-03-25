@@ -53,7 +53,7 @@ p, .description {
   display: flex;
 }
 
-/* Container -> primeiro box */
+/* Homepage Container -> primeiro box */
 
 #intro {
   width: 300px;
@@ -126,7 +126,7 @@ footer a {
   opacity: 0.7;
 }
 
-/* Container -> segundo box */
+/* Homepage Container -> segundo box */
 
 .idea {
   display: flex;
@@ -157,4 +157,114 @@ footer a {
 
 .idea .description {
   margin: 16px 0;
+}
+
+/* Modal Container */
+
+/* ModalForm Container -> modal*/
+
+#modal {
+  background: #ff5e84;
+
+  position: absolute;
+  top: 0;
+
+  width: 100vw; /* viewport width - toda área visivel do dispositivo */
+  height: 100vw;
+
+  display: flex;
+  justify-content: center;
+
+}
+
+#modal .content {
+  margin-top: 128px;
+
+  color: white;
+}
+
+#modal .content h1 {
+  text-align: center;
+
+  text-transform: uppercase;
+}
+
+#modal form {
+  width: 80%;
+  max-width: 800px;
+
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* duas colunas flexissíveis. Brutamente: 100px 500px */
+
+  gap: 20px;
+}
+
+.content form div:nth-child(3),
+.content form div:nth-child(4),
+.content form div:nth-child(5) { /* pegue o elemento filho */
+/*
+  Como está estruturado antes do grid-column: span 2
+    [1][2]
+    [3][4]
+    [5][6]
+  após o grid-column: span 2
+    [1][2]
+    [ 3  ]
+    [ 4  ]
+    [ 5  ]
+    [6]
+*/
+
+  grid-column: span 2;
+}
+
+form input,
+form textarea {
+  width: 100%;
+
+  padding: 12px;
+  box-sizing: border-box;
+
+  border-radius: 6px;
+  border: 1px solid rgba(141, 25, 52, 0.5);
+
+  outline: none;
+
+  font-size: 16px;
+}
+
+form label {
+  font-weight: 600;
+  line-height: 32px;
+  letter-spacing: 0.8px;
+
+}
+
+form button {
+  background: white;
+
+  width: 150px;
+  height: 40px;
+
+  border-radius: 6px;
+
+  cursor: pointer;
+
+  margin-top: 32px;
+
+  grid-column: 2; /* lança o button para a segunda coluna */
+  justify-self: end;
+}
+
+form button:hover {
+  background-color: #0984e3;
+  color: white;
+
+  text-decoration: none;
+}
+
+#modal.hide {
+  display: none;
 }
