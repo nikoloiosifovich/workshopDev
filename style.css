@@ -1,30 +1,160 @@
  /* CSS - Cascading StyleSheet */
+ /*
+    BOX -> Conteudo
+           Espaçamentos
+           Bordas
+           Preenchimento
+
+           Posicionamento
+
+ */
+
+ /* Estrutura principal */
 
 body {
   background: #e5e5e5;
   color: #25282b;
-  text-align: center;
+
+  font-family: 'Montserrat', sans-serif;
+
+  margin: 0;
+}
+
+/* Caracteristicas globais */
+
+.hide {
+  display: none;
+}
+
+a {
+  color: #ff5e84;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+p, .description {
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.1px;
+}
+
+/* Caracteristicas especificas */
+
+#container {
+  width: 80%;
+  max-width: 980px;
+
+  margin: 40px auto;
+
+  display: flex;
+}
+
+/* Container -> primeiro box */
+
+#intro {
+  width: 300px;
+
+  margin-right: 20px;
+}
+
+#main {
+  margin: 32px 0;
+
+}
+
+#buttons {
+  display: flex;
+  justify-content: space-evenly;
+
+  margin-bottom: 32px;
+
 }
 
 button {
+  background: none;
   color: #ff5e84;
 
   border: none;
 
+  font-size: 14px;
   font-weight: bold;
-  background: none;
+  line-height: 18px;
+  letter-spacing: 0.2px;
+
+  cursor: pointer;
+
+  outline: none;
 }
 
-.fat{
-  color: white;
+button:hover {
+  text-decoration: underline;
+}
+
+button.fat {
   background: #ff5e84;
+  color: white;
+
+  width: 150px;
+  height: 40px;
+
+  border-radius: 6px;
+
+  box-shadow: 8px 8px 16px #ff5e8432; /* os dois últimos numeros serão o nível alfa; em rgba(255, 0, 92, 0.16) */
+
 }
 
-#footer a {
-  color: #25282b;
-  text-decoration: transparent;
+button.fat:hover {
+  text-decoration: none;
 }
 
-.hide {
-  display: none;
+footer {
+  text-align: center;
+
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: 0.2px;
+
+  color: #777;
+}
+
+footer a {
+  opacity: 0.7;
+}
+
+/* Container -> segundo box */
+
+.idea {
+  display: flex;
+
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 4px 16px -8px rgba(1, 1, 1, 0.1);
+
+  padding: 32px;
+  margin-bottom: 32px;
+}
+
+.idea img {
+  width: 60px;
+  height: 60px;
+
+  margin-right: 32px;
+}
+
+.idea h3 {
+  margin: 0;
+}
+
+.idea p {
+  margin: 8px 0;
+  color: #777;
+}
+
+.idea .description {
+  margin: 16px 0;
 }
