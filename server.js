@@ -76,6 +76,9 @@ const db = require("./db");
 // configurar arquivos estáticos (css, scripts, imagnes)
 server.use(express.static("public"));
 
+// habilitar o uso do req.body
+server.use(express.urlencoded({ extended: true }));
+
 // configuração do nunjuks (template builder. eg. jinja)
 const nunjuks = require("nunjucks");
 nunjuks.configure("views", {
@@ -108,6 +111,31 @@ server.get("/ideias", function(req, res) {
     const allIdeas = [...rows].reverse();
     return res.render("ideias.html", { ideas: allIdeas });
   });
+});
+
+server.post("/", function(req, res) {
+  const { image, title, category, description, link } = req.body;
+
+  const query = `
+  INSERT INTO ideas(
+    image,
+    title,
+    category,
+    description,
+    link
+  ) VALUES (?, ?, ?, ?, ?);
+  `;
+
+  const values = [image, title, category, description, link];
+
+  db.run(query, values, function(err) {
+    if (err) {
+      console.log(err);
+      return res.send("Erro no banco de dados!");
+    }
+  });
+
+  return res.redirect("/ideias");
 });
 
 // liguei meu servidor na porta 3333
