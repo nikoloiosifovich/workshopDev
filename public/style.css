@@ -1,5 +1,5 @@
- /* CSS - Cascading StyleSheet */
- /*
+/* CSS - Cascading StyleSheet */
+/*
     BOX -> Conteudo
            Espaçamentos
            Bordas
@@ -9,13 +9,13 @@
 
  */
 
- /* Estrutura principal */
+/* Estrutura principal */
 
 body {
   background: #e5e5e5;
   color: #25282b;
 
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 
   margin: 0;
 }
@@ -40,7 +40,8 @@ a:hover {
   text-decoration: underline;
 }
 
-p, .description {
+p,
+.description {
   font-size: 16px;
   line-height: 24px;
   letter-spacing: 0.1px;
@@ -63,14 +64,12 @@ p, .description {
   border-radius: 8px;
 
   box-shadow: 8px 8px 16px #ff5e8432; /* os dois últimos numeros serão o nível alfa; em rgba(255, 0, 92, 0.16) */
-
 }
 
 .button:hover {
   background-color: #0984e3;
   text-decoration: none;
 }
-
 
 /* Caracteristicas especificas */
 
@@ -93,7 +92,6 @@ p, .description {
 
 #main {
   margin: 32px 0;
-
 }
 
 #buttons {
@@ -101,7 +99,6 @@ p, .description {
   justify-content: space-evenly;
 
   margin-bottom: 32px;
-
 }
 
 button {
@@ -201,7 +198,7 @@ footer a {
 }
 
 #modal .content {
-  margin-top: 15%;
+  margin-top: 5%;
 
   color: white;
 }
@@ -226,8 +223,9 @@ footer a {
 
 .content form div:nth-child(3),
 .content form div:nth-child(4),
-.content form div:nth-child(5) { /* pegue o elemento filho */
-/*
+.content form div:nth-child(5) {
+  /* pegue o elemento filho */
+  /*
   Como está estruturado antes do grid-column: span 2
     [1][2]
     [3][4]
@@ -262,7 +260,6 @@ form label {
   font-weight: 600;
   line-height: 32px;
   letter-spacing: 0.8px;
-
 }
 
 form a {
@@ -280,7 +277,6 @@ form a {
 
   font-size: 14px;
   font-weight: bold;
-
 
   border-radius: 6px;
 
@@ -332,7 +328,7 @@ form button:hover {
   IDEIA.HTML
 */
 
-#page-ideas #container{
+#page-ideas #container {
   display: block;
 }
 
@@ -367,7 +363,6 @@ form button:hover {
 
 section#title {
   text-align: center;
-
 }
 
 section#title p {
