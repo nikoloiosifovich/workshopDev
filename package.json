@@ -1,0 +1,25 @@
+{
+  "name": "WorkshopDev",
+  "version": "1.0.0",
+  "description": "<p align=\"center\">   <img width=\"460\" height=\"400\" src=\"casacriativa.png\"> </p>",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nikoloiosifovich/workshopDev.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nikoloiosifovich/workshopDev/issues"
+  },
+  "homepage": "https://github.com/nikoloiosifovich/workshopDev#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^2.0.2"
+  }
+}
