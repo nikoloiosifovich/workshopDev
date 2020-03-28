@@ -16,23 +16,24 @@ db.serialize(() => {
 
   // INSERT
 
-  const query = `
-  INSERT INTO ideas(
-    image,
-    title,
-    category,
-    description,
-    link
-  ) VALUES (?, ?, ?, ?, ?);
-  `;
+  // const query = `
+  // INSERT INTO ideas(
+  //   image,
+  //   title,
+  //   category,
+  //   description,
+  //   link
+  // ) VALUES (?, ?, ?, ?, ?);
+  // `;
 
-  const values = [
-    "https://image.flaticon.com/icons/svg/2729/2729007.svg",
-    "Cursos de Programação",
-    "Estudo",
-    "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto labore ratione iste quidem ips deserunt, voluptas nemo distinctio totam quia sunt dolores asperiores, in cumque autem dolorem, animi obcaecati repudiandae.",
-    "http://udemy.com"
-  ];
+  // const values = [
+  //   "https://image.flaticon.com/icons/svg/2729/2729007.svg",
+  //   "Cursos de Programação",
+  //   "Estudo",
+  //   "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto labore ratione iste quidem ips deserunt, voluptas nemo distinctio totam quia sunt dolores asperiores, in cumque autem dolorem, animi obcaecati repudiandae.",
+  //   "http://udemy.com"
+  // ];
+
   // db.run(query, values, function(err) {
   //   if (err) return console.log(err);
 
@@ -47,11 +48,11 @@ db.serialize(() => {
   // });
 
   // READ
-  db.all(`SELECT * FROM ideas`, function(err, rows) {
-    if (err) return console.log(err);
+  // db.all(`SELECT * FROM ideas`, function(err, rows) {
+  //   if (err) return console.log(err);
 
-    console.log(rows);
-  });
+  //   console.log(rows);
+  // });
 });
 
-db.close();
+module.exports = db;
