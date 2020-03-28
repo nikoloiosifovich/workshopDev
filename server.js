@@ -8,13 +8,16 @@ server.use(express.static("public"));
 // configuração do nunjuks (template builder. eg. jinja)
 const nunjuks = require("nunjucks");
 nunjuks.configure("views", {
-  express: server
+  express: server,
+  noCache: true // apenas em desenvolvimento, em produção deixar como false
 });
 
 // criei uma rota /
 // e capturo o projeto do cliente para responder
 server.get("/", function(req, res) {
-  return res.render("index.html");
+  // exemplo de utilização do nunjuks
+  const h1 = "OI DO BACKEND";
+  return res.render("index.html", { title: h1 });
 });
 
 server.get("/ideias", function(req, res) {
